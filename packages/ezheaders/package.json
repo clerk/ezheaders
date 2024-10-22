@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
@@ -25,5 +26,9 @@
   },
   "peerDependencies": {
     "next": "^15"
+  },
+  "repository": {
+    "url": "git+https://github.com/clerk/ezheaders.git",
+    "directory": "packages/ezheaders"
   }
 }
