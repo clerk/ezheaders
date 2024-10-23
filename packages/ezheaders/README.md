@@ -32,7 +32,7 @@ Would you like to work on Open Source software and help maintain this repository
 Enjoy a more readable API with `header()` and `cookie()` - no more juggling intermediate variables or extra parentheses when handling `await`.
 Plus, a way to use `headers` and `cookies` as variable names without renaming the NextJS APIs upon import.
 
-This lightweight package provides drop-in replacements and handy utilities that not only let you reclaim those variable names but also offer a more readable API. With `header()` and `cookie()`, you can access headers and cookies directly without needing an intermediate variable or extra parentheses to handle `await`.
+This lightweight package provides drop-in replacements and handy utilities that not only let you reclaim those variable names but also offer a more readable API.
 
 ## Why EZHeaders?
 
