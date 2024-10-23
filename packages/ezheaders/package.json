@@ -28,7 +28,7 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "next": "^15"
+    "next": "^14 || ^15"
   },
   "repository": {
     "url": "git+https://github.com/clerk/ezheaders.git",

@@ -32,7 +32,7 @@ Would you like to work on Open Source software and help maintain this repository
 Enjoy a more readable API with `header()` and `cookie()` - no more juggling intermediate variables or extra parentheses when handling `await`.
 Plus, a way to use `headers` and `cookies` as variable names without renaming the NextJS APIs upon import.
 
-This tiny monorepo containing the codebase for `ezheaders` - for details docs about `ezheaders`, refer to the [ezheaders README](./packages/ezheaders/README.md).
+This tiny monorepo contains the code for `ezheaders` - for details docs about `ezheaders`, refer to the [ezheaders README](./packages/ezheaders/README.md).
 
 ## License
 
