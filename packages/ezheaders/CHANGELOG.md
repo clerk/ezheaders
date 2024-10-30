@@ -1,5 +1,11 @@
 # ezheaders
 
+## 0.0.3
+
+### Patch Changes
+
+- 2b2e0d8: Allow Next 15 as peer dependency
+
 ## 0.0.2
 
 ### Patch Changes
