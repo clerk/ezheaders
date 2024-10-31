@@ -27,7 +27,7 @@
     "eslint": "^8.57.0",
     "tsup": "^8.3.0",
     "typescript": "^5.3.3",
-    "next": "13.5.4"
+    "next": "14.2.10"
   },
   "peerDependencies": {
     "next": "^13.5.4 || ^14 || ^15"
