@@ -6,6 +6,8 @@ type CookieSetParams = Parameters<ReturnType<AwaitedProp<typeof _cookies, "set">
 type CookieGetReturn = ReturnType<AwaitedProp<typeof _cookies, "get">>;
 type CookieSetReturn = ReturnType<AwaitedProp<typeof _cookies, "set">>;
 
+type GetCookiesFn = () => Promise<Awaited<ReturnType<typeof _cookies>>>
+
 export function createCookieHelpers(cookies = _cookies) {
   /**
    * An async function that allows you to read a specific HTTP incoming request cookie from within a Server Component.
@@ -29,7 +31,7 @@ export function createCookieHelpers(cookies = _cookies) {
   async function cookie(
     name: CookieGetParams[0],
     value: CookieSetParams[1],
-    options?: CookieSetParams[2],
+    options?: CookieSetParams[2]
   ): Promise<CookieSetReturn>;
   async function cookie(...args: unknown[]): Promise<CookieGetReturn | CookieSetReturn> {
     const [nameOrCookie, value, opts] = args as [CookieGetParams[0], CookieSetParams[1], CookieSetParams[2]];
@@ -58,7 +60,7 @@ export function createCookieHelpers(cookies = _cookies) {
    * const cookies = await getCookies();
    * const token = cookies.get('token');
    */
-  const getCookies = () => cookies();
+  const getCookies: GetCookiesFn = async () => cookies();
 
   return { cookie, getCookies };
 }

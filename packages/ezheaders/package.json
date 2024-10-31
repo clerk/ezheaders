@@ -26,10 +26,11 @@
     "@types/eslint": "^8.56.5",
     "eslint": "^8.57.0",
     "tsup": "^8.3.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "next": "13.5.4"
   },
   "peerDependencies": {
-    "next": "^14 || ^15"
+    "next": "^13.5.4 || ^14 || ^15"
   },
   "repository": {
     "url": "git+https://github.com/clerk/ezheaders.git",

@@ -5,6 +5,8 @@ type HeaderParams = Parameters<AwaitedProp<typeof _headers, "get">>;
 type HeaderReturn = ReturnType<AwaitedProp<typeof _headers, "get">>;
 type HeaderFn = (...args: HeaderParams) => Promise<HeaderReturn>;
 
+type GetHeadersFn = () => Promise<Awaited<ReturnType<typeof _headers>>>
+
 export function createHeaderHelpers(headers = _headers) {
   /**
    * An async function that allows you to read a specific HTTP incoming request header from within a Server Component.
@@ -19,8 +21,9 @@ export function createHeaderHelpers(headers = _headers) {
    * import { header } from 'ezheaders';
    * const token = await header('token');
    */
-  const header: HeaderFn = (...args) => {
-    return headers().then((h) => h.get(...args));
+  const header: HeaderFn = async (...args) => {
+    const headerStrore = (await headers());
+    return headerStrore.get(...args);
   };
 
   /**
@@ -37,9 +40,10 @@ export function createHeaderHelpers(headers = _headers) {
    * const headers = await getHeaders();
    * const token = headers.get('token');
    */
-  const getHeaders = () => headers();
+  const getHeaders: GetHeadersFn = async () => headers();
 
   return { header, getHeaders };
 }
+
 
 export const { header, getHeaders } = createHeaderHelpers();
