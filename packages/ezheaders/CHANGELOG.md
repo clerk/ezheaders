@@ -1,5 +1,11 @@
 # ezheaders
 
+## 0.1.0
+
+### Minor Changes
+
+- 414cdc9: Fix support for Next 13 and 14
+
 ## 0.0.3
 
 ### Patch Changes
